@@ -1,0 +1,325 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: 500;
+}
+:root{
+ --Lineargradient: hsl(249, 99%, 64%) to hsl(278, 94%, 30%);
+--Red: hsl(0, 100%, 66%);
+--White : hsl(0, 0%, 100%);
+--Lightgray : hsl(270, 3%, 87%);
+--Darkgray : hsl(279, 6%, 55%);
+--Verydark : hsl(278, 68%, 11%);
+}
+
+#container{
+display: flex;
+height: 100vh;
+
+}
+
+#mainbg{
+background-image: url(bg-main-desktop.png);
+width: 30%;
+
+
+}
+#mainfield{
+    background-color:var(--lightgray);
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px
+}
+
+ 
+#front{
+    background-image: url(bg-card-front.png);
+    background-repeat: no-repeat;
+    position: relative;
+    background-size: contain;
+    top: 9rem;
+    left: 35%;
+    height: 13rem;
+} 
+
+
+img{
+    margin: 28px 23px -18px 24px;
+    width: 61px;}
+#cardfield{
+margin: 10px 10px 10px 10px;
+}
+#number{
+    color: var(--White);
+    font-size: 1.5rem;
+    margin: 50px 7px 25px 14px;
+}
+
+#name{
+    color: var(--White);
+    font-size: 1rem;
+    margin: 37px 132px 20px 14px;
+}
+
+#date{
+    color: var(--White);
+    font-size: 1rem;
+    margin: 21px 8px 7px -27px
+}
+
+#cardback{   
+    background-image: url(bg-card-back.png);
+    background-repeat: no-repeat;
+    position: relative;
+    background-size: contain;
+    top: 11rem;
+    left: 53%;
+    height: 14rem;
+    border-radius: -23px;
+}
+#cvvtext {
+    position: absolute;
+    top: 45%;
+    left: 72%;
+    color: var(--White);
+}
+
+
+
+#formfield{
+    
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    /* width: 23rem; */
+    margin: 4px 0px 6px -3px;
+    
+}
+
+.cvv {
+    margin: 10px 0px 9px 20px;
+}
+input{
+    margin-top: 3px;
+    /* width: 100%; */
+    height: 38px;
+    border-radius: 6px;
+    border: 1px solid var(--Darkgray);
+    padding: 0px 0px 0px 10px;
+    
+}
+label{
+    text-transform: uppercase;
+    font-size: 13px;
+    }
+    .error{
+    font-size: 13px;  
+    margin: 2px 0px 2px 5px;
+    display: none;
+
+}
+ .date-cvv {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+
+  /* .date label,.cvv label {
+    display: block;
+    margin-bottom: 5px;
+  } */
+  
+  .date input,.cvv input {
+    width: 50px;
+    display: inline-block;
+    
+  }
+  .cvv input{
+    width: 6rem;
+  }
+ input:focus{
+ border: 1px solid var(--Verydark);
+ }
+ button#Confirm {
+    width: 100%;
+    height: 2rem;
+    margin-top: 10px;
+    background-color: var(--Verydark);
+    color: white;
+    border: 1px solid var(--Darkgray);
+    border-radius:5px;
+    opacity: 1;
+}
+button#continue {
+    width: 100%;
+    height: 2rem;
+    margin-top: 10px;
+    background-color: var(--Verydark);
+    color: white;
+    border: 1px solid var(--Darkgray);
+    border-radius:5px;
+    opacity: 1;
+}
+ 
+#successmessage img{
+    margin: 34px 49px 27px 83px;
+}
+
+#successmessage{
+    display: none;
+}
+#successmessage.active{
+    display: block;
+    /* opacity: 1; */
+    pointer-events: all;
+
+}
+ 
+@media only screen and (max-width: 375px) {
+    #container {
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+  
+    #mainbg {
+      width: 100%;
+      height: 200px; /* adjust the height as needed */
+      background-size: cover;
+      z-index: 3;
+    }
+  
+    #mainfield {
+      width: 100%;
+      padding: 20px;
+    }
+  
+    #front {
+        top: 91px;
+        left: 25px;
+        /* height: 37%; */
+        width: 76%;
+        background-size: contain;
+        z-index: 2;
+    
+    
+    }
+    
+    #cardfield {
+        margin: 10px;
+      }
+    
+      #number, #name, #date {
+        font-size: 1rem;
+        margin: 10px;
+      }
+    
+      #cardback {
+          top: -95%;
+          left: 29%;
+          /* height: 8rem; */
+          width: 68%;
+          background-size: contain;
+          z-index: 1;
+      
+      }
+      
+      .cvv {
+          margin: 3px 94px 0px 0px;
+      }
+    
+      #cvvtext {
+        top: 23%;
+        left: 74%;;
+      }
+    
+      #formfield {
+        width: 100%;
+        /* padding: 20px; */
+      }
+    
+      input[type="text"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+      }
+  
+      #front img{
+        margin: 10px;
+      }
+    
+      button#Confirm, button#continue {
+        width: 100%;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px; /* adjust the font size to fit the button */
+      }
+    form{
+      margin: 44px -7px 15px 7px;
+  
+    }
+    .date-cvv {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+   .date {
+      margin-right: 10px;
+    }
+    
+   .date input {
+      width: 60px;
+    }
+    
+   .cvv {
+      margin-left: 0;
+    }
+    
+   .cvv input {
+      width: 60px;
+    }
+  
+    
+        #successmessage {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 110vh;
+          background-color: #fff;
+          display: none;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+        }
+        
+        #successmessage.active {
+          display: flex;
+        }
+      
+        #successmessage img {
+            width: 15%;
+            margin: 20px auto; /* add some margin to the image to center it */
+          }
+
+    
+  
+
+
+
+
+
+    }

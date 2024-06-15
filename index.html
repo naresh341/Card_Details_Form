@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Interactive card details form</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div id="mainbg">
+        <div id="cardfront">
+          <div id="front">
+            <img src="card-logo.svg" alt="card-logo" />
+            <div id="cardfield">
+              <p id="number">0000 0000 0000 0000</p>
+              <span id="name">Jane Appleseed</span>
+              <span id="date">00/00</span>
+            </div>
+          </div>
+        </div>
+
+        <div id="cardback">
+          <div id="cvv">
+            <p id="cvvtext">000</p>
+          </div>
+        </div>
+      </div>
+
+      <div id="mainfield">
+        <form id="form">
+          <div id="formfield">
+            <label for="">Cardholder Name</label>
+            <input type="text" id="formName" placeholder="Jane Appleseed" />
+            <span class="error">Can't be blank</span>
+          </div>
+          <div>
+            <div id="formfield">
+              <label for="">Card Number</label>
+              <input type="text" id="formNumber" placeholder="1234 5678 9123 0000" />
+              <span class="error">Can't be blank</span>
+
+            </div>
+
+            <div id="formfied" class="date-cvv">
+              <div class="date">
+                <label for="">Exp. Date (MM/YY)</label> <br>
+                <input type="text" id="formMonth" placeholder="MM" />
+                <input type="text" id="formYear" placeholder="YY" /> <br>
+                <span class="error">Can't be blank</span>
+              </div>
+              <div class="cvv">
+                <label for="">CVC</label> <br>
+                <input type="text" id="formcvv" placeholder="123" /> <br>
+                <span class="error">Can't be blank</span>
+              </div>
+            </div>
+
+
+          </div>
+          <button id="Confirm">Confirm</button>
+        </form>
+        <div id="successmessage">
+          <img src="icon-complete.svg" alt="Done">
+            <div id="header">Thank you!</div>
+          <p>We've added your card details</p>
+          <button id="continue">Continue</button>
+          </div>
+      </div>
+    </div>
+
+    
+    
+
+    <script src="main.js"></script>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Naresh Bhati</a>.
+    </div>
+  </body>
+</html>
